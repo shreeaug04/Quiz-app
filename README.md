@@ -1,2 +1,1 @@
-# Quiz-app
-This is Quiz for English vocabulary
+### Boilerplate app structure for Quiz App project

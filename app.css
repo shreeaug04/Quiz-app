@@ -1,0 +1,191 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background-color: #202020;
+  color: #BEBEBE;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+h2, h3{
+  color: #38a ;
+}
+h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+fieldset {
+  border: none;
+}
+.start-Quiz{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+}
+#submit:hover{
+	background-color: #38a;
+}
+
+.question {
+  min-height: 175px;;
+}
+
+.question h3 {
+  margin: 0px 10px 0px 10px;
+}
+
+.hide {
+  visibility: hidden;
+}
+.answers {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0px;                         /* this is necessary to override browser defaults */
+  gap: 10px;
+  justify-content: space-between;
+  min-width: 295px;
+  max-width: 700px;
+  margin-bottom: 15px;
+}
+
+.selected-answer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  font-style: bold;
+  background-color: #333333;
+  color: #34DBDB;
+  border-radius: 5px;
+}
+
+.correct-answer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  font-style: bold;
+  background-color: #1a4301;
+  color: #aad576;
+  border-radius: 5px;
+}
+
+.wrong-answer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  font-style: bold;
+  background-color: #660708;
+  color: #FF785C;
+  border-radius: 5px;
+}
+@media (min-width: 700px) {
+  body {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main-nav-list-item {
+    float:left;
+    width: 25%;
+  }
+  /*
+  * A grid can do this math for you!
+  */
+  .box {
+    width: 47%;
+    float: left;
+  }
+  /*
+   * targeting every other '.box' to add a right margin
+   */
+  .box:nth-child(odd) {
+    margin-right: 6%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.main-nav-list {
+  list-style: none;
+  padding: 0;
+}
+.main-nav-list-item {
+  padding: .7rem 0;
+  text-align:center;
+  background-color: lime;
+  border: 1px solid #000;
+}
+
+.box {
+  background-color: pink;
+  border:1px solid blue;
+  margin: 10px 0;
+  padding:10px;
+}
+
+/*
+ * Here is where you would override your base styles
+ * for screens that are larger than 700px.
+ *
+ * Write these styles 2nd!
+/*
+ * Here is where you would write your styles for screens
+ * larger than 1024px.
+ *
+ * These styles OVERRIDE any styles written above.
+ *
+ * Write these styles 3rd!
+ */
+@media (min-width: 1024px) {
+  /*
+  * A grid can do this math for you!
+  */
+  .box {
+    width: 29.33%;
+    float: left;
+    margin-right: 6%;
+  }
+  /*
+   * targeting every third '.box' to add a right margin
+   */
+  .box:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+
+/*
+ * clearfix hack 
+ * https://css-tricks.com/snippets/css/clear-fix/
+ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
